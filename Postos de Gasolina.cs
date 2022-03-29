@@ -36,7 +36,7 @@ namespace IntroCS
     {
         float valorPosto1, valorPosto2, valorPosto3, mediaReaisPrecosGasolinas;
 
-        Console.WriteLine ("Bem vindo ao programa de média de gasolinas de 03 postos!");  
+        Console.WriteLine ("Bem vindo ao programa de media de gasolinas de 03 postos!");  
         Console.WriteLine ("Insira o valor da Gasolina do Posto 1:");
         valorPosto1 = float.Parse(Console.ReadLine());  
 
