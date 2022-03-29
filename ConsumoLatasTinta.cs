@@ -1,6 +1,6 @@
 /******************************************************************************************************
 %  Code: 
-%   PostosDeGasolina.cs
+%   ConsumoLatasTinta.cs
 %
 %  Purpose:
 %   Implements sample C# code 
