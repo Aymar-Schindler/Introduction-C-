@@ -1,6 +1,6 @@
 /******************************************************************************************************
 %  Code: 
-%   PostosDeGasolina.cs
+%   TempoSegundos.cs
 %
 %  Purpose:
 %   Implements sample C# code 
