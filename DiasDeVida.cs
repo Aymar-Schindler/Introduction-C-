@@ -43,7 +43,7 @@ namespace IntroCS
         Console.Write("Digite a sua idade atual: ");
         idade = int.Parse(Console.ReadLine());
  
-        numeroDiasTerra = idade * 365;  
+        numeroDiasDeVida = idade * 365;  
   
         Console.WriteLine("{0}  você tem  {1} dias de vida na terra", nome, numeroDiasDeVida);      
     }
