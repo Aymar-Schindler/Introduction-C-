@@ -41,6 +41,7 @@ namespace IntroCS
 			num3 = int.Parse (Console.ReadLine ());
 
 			//Condicional
+			// Poderia também usar mais laços de if/else em cadeia comparando os três para chegar no maior, mas com mais linhas
 			if (Math.Max (num1, num2) >= num3) {
 				Console.WriteLine ("O número {0} é o maior dos três digitados.", Math.Max (num1, num2));
 			} else {
