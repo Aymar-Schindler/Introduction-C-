@@ -53,8 +53,6 @@ namespace IntroCS
                 case >7:
                  Console.WriteLine ("Infantil B");
                  break;
-                 case <=7:
-                 Console.WriteLine ("Categoria Inexistente");
                  break;
 			}
 		}
