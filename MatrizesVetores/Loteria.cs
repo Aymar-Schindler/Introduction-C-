@@ -49,9 +49,9 @@ namespace IntroCS
 
       //Entrada de Dados com insercao na matriz das apostas
       for(linha = 0; linha < 13;linha++){
-      Console.Write ("Para o jogo de número {0} digite '0' para vitória do primeiro time, '1' para empate ou '2' para vitória do segundo time: ", (linha + 1));
-			aposta = int.Parse (Console.ReadLine ());
-        switch (aposta) {
+      Console.Write("Para o jogo de número {0} digite '0' para vitória do primeiro time, '1' para empate ou '2' para vitória do segundo time: ", (linha + 1));
+			aposta = int.Parse(Console.ReadLine ());
+        switch(aposta) {
           //lançamento da aposta de vitória do primeiro time
           case 0:
             ApostasRealizadas[linha,0] = 1;
@@ -72,14 +72,14 @@ namespace IntroCS
             break;
           //inserção de valor inválido
           default:
-            Console.WriteLine ("Número inválido para inserir sua aposta!");
+            Console.WriteLine("Número inválido para inserir sua aposta!");
             break;
         }
       Console.Write("\n"); 
       }
 
       //Impressão de Apostas Realizadas
-      Console.WriteLine ("Segue abaixo o seu cartão de apostas: \n");
+      Console.WriteLine("Segue abaixo o seu cartão de apostas: \n");
       for(linha = 0; linha < 13;linha++){
         for(coluna = 0; coluna < 3; coluna++){     
           Console.Write("{0}\t", ApostasRealizadas[linha,coluna]);   
@@ -95,7 +95,7 @@ namespace IntroCS
       }
       
       //Impressão dos Resultados Oficiais
-      Console.WriteLine ("O resultado saiu! Veja o cartão de Resultados Oficiais abaixo: \n");
+      Console.WriteLine("O resultado saiu! Veja o cartão de Resultados Oficiais abaixo: \n");
       for(linha = 0; linha < 13;linha++){
         for(coluna = 0; coluna < 3; coluna++){     
           Console.Write("{0}\t", ResultadosOficiais[linha,coluna]);   
@@ -107,8 +107,8 @@ namespace IntroCS
       //Comparação das Duas Matrizes
       for(linha = 0; linha < 13;linha++){
          for(coluna = 0; coluna < 3; coluna++){
-            if (ResultadosOficiais[linha,coluna] == 1) {
-               if (ResultadosOficiais[linha,coluna] == ApostasRealizadas[linha,coluna]) {
+            if(ResultadosOficiais[linha,coluna] == 1) {
+               if(ResultadosOficiais[linha,coluna] == ApostasRealizadas[linha,coluna]) {
                   pontuacao++;
                }
             }
