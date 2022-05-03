@@ -53,16 +53,6 @@ namespace IntroCS
 
       int[,] matriz = new int[4, 4];
 
-      Console.WriteLine ("Quantas linhas deseja que sua matriz aleatoria tenha?");
-      int linhas = 0;
-      linhas = int.Parse (Console.ReadLine ());
-      linhas = matriz.GetLength(0);
-
-      Console.WriteLine ("Quantas colunas deseja que sua matriz aleatoria tenha?");
-      int colunas = 0;
-      colunas = int.Parse (Console.ReadLine ());
-      colunas = matriz.GetLength(1);
-
       Console.WriteLine ("Matriz Aleatoria");  
       MatrizAleatoriaOtimazada(matriz);
       ImprimirMatriz(matriz);
