@@ -59,7 +59,7 @@ namespace IntroCS
     static void Main()
     {
       //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
-      Console.Write("Informe a quantidade de linha que deseja da matriz aleatoria: ");
+      Console.Write("Informe a dimensão da matriz quadrada que deseja ser gerada aleatoriamente: ");
       int n;
        n = int.Parse(Console.ReadLine());
       int[,] matriz = new int[n, n];
