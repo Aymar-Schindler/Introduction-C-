@@ -41,17 +41,17 @@ namespace IntroCS
     
     }
     
-    /*ImprimirMatriz*/
+    /*Imprimir Matriz Diagonal*/
     static void ImprimirMatriz(int[,] matriz, int n)
     {
         for(int linha = 0; linha < n; linha++){
           for(int coluna = 0; coluna < n; coluna++){   
             if(coluna == linha){ 
-            //qdo é igual numero é aleatorio, ou seja, preenche só diagonal
+            //qdo é igual o indice de colunas com o de linhas o valor é aleatorio, ou seja, preenche só a diagonal
             Console.Write("{0}\t", matriz[linha,coluna]);   
             }else{
             matriz[linha,coluna] = 0; 
-            //qdo é diferente não é diagonal, então preenche com zero
+            //qdo não, não é diagonal, então preenche com zero
             Console.Write("{0}\t", matriz[linha,coluna]);
             }
           }  
@@ -63,13 +63,13 @@ namespace IntroCS
     static void Main()
     {
       //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
-      Console.Write("Informe a dimensão da matriz quadrada que deseja ser gerada aleatoriamente: ");
+      Console.Write("Informe a dimensão que deseja da matriz aleatoria diagonal: ");
       int n;
        n = int.Parse(Console.ReadLine());
       int[,] matriz = new int[n, n];
       Console.Write("\n");  
 
-      Console.WriteLine ("Matriz Aleatória\n");  
+      Console.WriteLine ("Matriz Aleatória Diagonal: \n");  
       MatrizAleatoria(matriz, n);
       ImprimirMatriz(matriz, n);
     }/*main*/
