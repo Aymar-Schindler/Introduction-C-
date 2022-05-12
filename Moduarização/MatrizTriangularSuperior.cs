@@ -4,7 +4,7 @@
 %
 %  Purpose:
 %   Implements sample C# code 
-%   Exercise #4 - Introdução a Linguagem de Programação: Matrizes e Vetores
+%   Exercise #6 - Introdução a Linguagem de Programação: Matrizes e Vetores
 IMPRIMIR Matriz Triangular Superior
  Uma matriz triangular é aquela em que os elementos acima ou abaixo da diagonal principal são nulos.
 É superior quando os números acima da diagonal principal são não nulos e abaixo iguais a zero.
@@ -52,7 +52,7 @@ namespace IntroCS
             Console.Write("{0}\t", matriz[linha,coluna]);   
             }else{
             matriz[linha,coluna] = 0; 
-            //qdo é diferente não é diagonal, então preenche com zero
+            //qdo é diferente, então preenche com zero
             Console.Write("{0}\t", matriz[linha,coluna]);
             }
           }  
@@ -64,15 +64,16 @@ namespace IntroCS
     static void Main()
     {
       //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
-      Console.Write("Informe a quantidade de linha que deseja da matriz aleatoria: ");
+      Console.Write("Informe a dimensão da matriz quadrada triangular superior que deseja ser gerada aleatoriamente: ");
       int n;
        n = int.Parse(Console.ReadLine());
       int[,] matriz = new int[n, n];
       Console.Write("\n");  
 
-      Console.WriteLine ("Matriz Aleatória\n");  
+      Console.WriteLine ("Matriz Triangular Superior Aleatória\n");  
       MatrizAleatoria(matriz, n);
       ImprimirMatriz(matriz, n);
     }/*main*/
    }
  }
+
