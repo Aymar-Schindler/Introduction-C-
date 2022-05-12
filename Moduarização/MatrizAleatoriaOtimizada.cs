@@ -25,38 +25,51 @@ namespace IntroCS
 { 
   public class RepositorioMatrizes
   {  
-    static void MatrizAleatoriaOtimazada(int[,] matriz)
-    {
-      for(int linha = 0; linha < matriz.GetLength(0); linha++)
-        for(int coluna = 0; coluna < matriz.GetLength(1); coluna++)    
-           matriz[linha,coluna] =  linha + coluna;   
     
-    }/*MatrizAleatoria*/
-
-    static void ImprimirMatriz(int[,] matriz)
+    /*MatrizAleatoria*/
+    static void MatrizAleatoria(int[,] matriz, int nLinha, int nColuna)
     {
-        for(int linha = 0; linha < matriz.GetLength(0); linha++){
-          for(int coluna = 0; coluna < matriz.GetLength(1); coluna++){    
-            Console.Write("{0}\t", matriz[linha,coluna]);   
+      
+      Random randNum = new Random(); 
+      //Criando o objeto randNum da classe Random
+      for(int linha = 0; linha < nLinha; linha++)
+        for(int coluna = 0; coluna < nColuna; coluna++) 
+          //usando o método Next() que retorna um número inteiro aleatório.
+           matriz[linha,coluna] = randNum.Next(1,10); 
+           //Se cria um valor randomico entre 1 e 10, para fugir do zero na diagonal principal
+    
+    }
+    
+    /*Imprimir Matrizes*/
+    static void ImprimirMatriz(int[,] matriz, int nLinha, int nColuna)
+    {
+        //Impressão da matriz aleatoria      
+        Console.WriteLine("Esta é a sua matriz aleatoria de dimensão {0} x {1}: \n", nLinha, nColuna);
+        for(int linha = 0; linha < nLinha; linha++){
+          for(int coluna = 0; coluna < nColuna; coluna++){   
+            Console.Write("{0}\t", matriz[linha,coluna]);
           }
           Console.Write("\n");   
         }
-  
-       Console.Write("\n"); 
-
-    }/*ImprimirMatriz*/
-
-
+        Console.Write("\n");   
+    }
 
     static void Main()
     {
-
-      int[,] matriz = new int[4, 4];
-
-      Console.WriteLine ("Matriz Aleatoria");  
-      MatrizAleatoriaOtimazada(matriz);
-      ImprimirMatriz(matriz);
-
-    } 
-  }
-}
+      //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
+      Console.Write("Informe a quantidade de linhas que deseja da matriz aleatoria: ");
+      int nLinha;
+       nLinha = int.Parse(Console.ReadLine());
+      Console.Write("\n"); 
+      
+      Console.Write("Informe a quantidade de colunas que deseja da matriz aleatoria: ");
+      int nColuna;
+      nColuna = int.Parse(Console.ReadLine());
+      Console.Write("\n"); 
+      int[,] matriz = new int[nLinha, nColuna];
+      
+      MatrizAleatoria(matriz, nLinha, nColuna);
+      ImprimirMatriz(matriz, nLinha, nColuna);
+    }/*main*/
+   }
+ }
