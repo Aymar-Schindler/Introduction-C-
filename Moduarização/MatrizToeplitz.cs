@@ -4,7 +4,7 @@
 %
 %  Purpose:
 %   Implements sample C# code 
-%   Exercise #3 - Introdução a Linguagem de Programação: Matrizes e Vetores
+%   Exercise #4 - Introdução a Linguagem de Programação: Matrizes e Vetores
 IMPRIMIR Matriz de Toeplitz
    Uma matriz de Toeplitz ou matriz de diagonais constantes, chamada assim em homenagem a Otto Toeplitz, é uma matriz em que cada diagonal descendente da esquerda para a direita tem valor constante. 
 %
@@ -41,7 +41,7 @@ namespace IntroCS
     
     }
     
-    /*ImprimirMatriz*/
+    /*Imprimir Matriz de Toeplitz*/
     static void ImprimirMatriz(int[,] matriz, int n)
     {
          for(int linha = 0; linha < n; linha++){
@@ -64,13 +64,13 @@ namespace IntroCS
     static void Main()
     {
       //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
-      Console.Write("Informe a dimensão da matriz quadrada que deseja ser gerada aleatoriamente: ");
+      Console.Write("Informe a dimensão da matriz quadrada de Toeplitz que deseja ser gerada aleatoriamente: ");
       int n;
        n = int.Parse(Console.ReadLine());
       int[,] matriz = new int[n, n];
       Console.Write("\n");  
 
-      Console.WriteLine ("Matriz Aleatória\n");  
+      Console.WriteLine ("Matriz de Toeplitz Aleatória: \n");  
       MatrizAleatoria(matriz, n);
       ImprimirMatriz(matriz, n);
     }/*main*/
