@@ -4,7 +4,7 @@
 %
 %  Purpose:
 %   Implements sample C# code 
-%   Exercise #5 - Introdução a Linguagem de Programação: Matrizes e Vetores
+%   Exercise #7 - Introdução a Linguagem de Programação: Matrizes e Vetores
 IMPRIMIR Matriz Triangular Inferior
  Uma matriz triangular é aquela em que os elementos acima ou abaixo da diagonal principal são nulos.
 É inferior quando os números acima da diagonal principal são nulos e abaixo não nulos.
@@ -42,7 +42,7 @@ namespace IntroCS
     
     }
     
-    /*ImprimirMatriz*/
+    /*Imprimir Matriz Inferior*/
     static void ImprimirMatriz(int[,] matriz, int n)
     {
         for(int linha = 0; linha < n; linha++){
@@ -64,13 +64,13 @@ namespace IntroCS
     static void Main()
     {
       //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
-      Console.Write("Informe a quantidade de linha que deseja da matriz aleatoria: ");
+      Console.Write("Informe a dimensão da matriz quadrada triangular inferior que deseja ser gerada aleatoriamente: ");
       int n;
        n = int.Parse(Console.ReadLine());
       int[,] matriz = new int[n, n];
       Console.Write("\n");  
 
-      Console.WriteLine ("Matriz Aleatória\n");  
+      Console.WriteLine ("Matriz Triangular Superior Aleatória: \n");  
       MatrizAleatoria(matriz, n);
       ImprimirMatriz(matriz, n);
     }/*main*/
