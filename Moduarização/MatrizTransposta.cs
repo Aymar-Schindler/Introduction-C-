@@ -4,7 +4,7 @@
 %
 %  Purpose:
 %   Implements sample C# code 
-%   Exercise #6 - Introdução a Linguagem de Programação: Matrizes e Vetores
+%   Exercise #8 - Introdução a Linguagem de Programação: Matrizes e Vetores
 
 IMPRIMIR Matriz Transposta
 A transposta de uma matriz A é uma matriz que apresenta os mesmos elementos de A, só que colocados em uma posição diferente. Ela é obtida transportando-se ordenadamente os elementos das linhas de A para as colunas da transposta.
@@ -57,8 +57,7 @@ namespace IntroCS
         Console.Write("\n"); 
 
         //Impressão da matriz transposta
-        Console.WriteLine("Esta é a matriz transposta de sua matriz aleatoria de dimensão {0} x {1}: \n", nLinha, nColuna);
-        Console.WriteLine("Matriz transposta de dimensão {0} x {1}: \n", nColuna, nLinha);
+        Console.WriteLine("Esta é a Matriz Transposta de dimensão {0} x {1}: \n", nColuna, nLinha);
         for(int coluna = 0; coluna < nColuna; coluna++){   
           for(int linha = 0; linha < nLinha; linha++){ 
             Console.Write("{0}\t", matriz[linha,coluna]);
@@ -71,7 +70,6 @@ namespace IntroCS
 
     static void Main()
     {
-      //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
       Console.Write("Informe a quantidade de linhas que deseja da matriz aleatoria: ");
       int nLinha;
        nLinha = int.Parse(Console.ReadLine());
@@ -83,9 +81,10 @@ namespace IntroCS
       Console.Write("\n"); 
        int[,] matriz = new int[nLinha, nColuna];
 
-      Console.WriteLine ("Matriz Aleatória\n");  
+ 
       MatrizAleatoria(matriz, nLinha, nColuna);
       ImprimirMatriz(matriz, nLinha, nColuna);
     }/*main*/
    }
  }
+
