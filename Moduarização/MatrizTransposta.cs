@@ -1,14 +1,17 @@
 /******************************************************************************************************
 %  Code: 
-%   MatrizAleatoriaOtimizada.cs
+%   MatrizTransposta.cs
 %
 %  Purpose:
 %   Implements sample C# code 
-%   Exercise #2 - Introdução a Linguagem de Programação: Modularizacao
-%   Otimizar o código de Matriz Aleatória de números do Ex1
+%   Exercise #8 - Introdução a Linguagem de Programação: Matrizes e Vetores
+
+IMPRIMIR Matriz Transposta
+A transposta de uma matriz A é uma matriz que apresenta os mesmos elementos de A, só que colocados em uma posição diferente. Ela é obtida transportando-se ordenadamente os elementos das linhas de A para as colunas da transposta.
+
 %
 %  Modified:
-%   May 02 2022 10:00 
+%   May 9 2022 10:00 
 %
 %  Author:
 %   Aymar Schindler  <aymarschindler 'at' hotmail.com>
@@ -51,12 +54,22 @@ namespace IntroCS
           }
           Console.Write("\n");   
         }
-        Console.Write("\n");   
+        Console.Write("\n"); 
+
+        //Impressão da matriz transposta
+        Console.WriteLine("Esta é a Matriz Transposta de dimensão {0} x {1}: \n", nColuna, nLinha);
+        for(int coluna = 0; coluna < nColuna; coluna++){   
+          for(int linha = 0; linha < nLinha; linha++){ 
+            Console.Write("{0}\t", matriz[linha,coluna]);
+          }
+          Console.Write("\n");   
+        }
+        Console.Write("\n"); 
+      
     }
 
     static void Main()
     {
-      //recebimento do tamanho da matriz que tem que ser quadrada para existir diagonal
       Console.Write("Informe a quantidade de linhas que deseja da matriz aleatoria: ");
       int nLinha;
        nLinha = int.Parse(Console.ReadLine());
@@ -64,12 +77,14 @@ namespace IntroCS
       
       Console.Write("Informe a quantidade de colunas que deseja da matriz aleatoria: ");
       int nColuna;
-      nColuna = int.Parse(Console.ReadLine());
+       nColuna = int.Parse(Console.ReadLine());
       Console.Write("\n"); 
-      int[,] matriz = new int[nLinha, nColuna];
-      
+       int[,] matriz = new int[nLinha, nColuna];
+
+ 
       MatrizAleatoria(matriz, nLinha, nColuna);
       ImprimirMatriz(matriz, nLinha, nColuna);
     }/*main*/
    }
  }
+
